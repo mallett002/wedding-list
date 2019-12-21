@@ -28,9 +28,9 @@ public class WeddingRepositoryImpl implements WeddingRepository {
         insert.setColumnNames(columns);
 
         Map<String, Object> data = new HashMap<>();
-        data.put("name", rsvp.getName());
         data.put("attending", rsvp.isAttending());
         data.put("guests", rsvp.getGuests());
+        data.put("name", rsvp.getName());
 
         insert.setGeneratedKeyName("id");
         Number id = insert.executeAndReturnKey(data);

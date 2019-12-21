@@ -5,9 +5,9 @@ import java.util.List;
 public class Rsvp {
 
     private Integer id;
-    private String name;
-    private List<String> guests;
     private boolean attending;
+    private List<String> guests;
+    private String name;
 
     public Integer getId() {
         return id;
@@ -34,6 +34,7 @@ public class Rsvp {
     }
 
     public void setGuests(List<String> guests) {
+        // RequestBody.attending will be an array
         this.guests = guests;
     }
 
