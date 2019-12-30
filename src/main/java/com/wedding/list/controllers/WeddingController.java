@@ -16,7 +16,7 @@ public class WeddingController {
     private WeddingService weddingService;
 
     @RequestMapping(value = "/rsvp", method = RequestMethod.POST)
-    public @ResponseBody Rsvp addRsvp(@RequestBody Rsvp rsvp) {
-        return weddingService.addRsvp(rsvp);
+    public @ResponseBody void addRsvp(@RequestBody Rsvp rsvp) {
+        weddingService.addRsvp(rsvp);
     }
 }

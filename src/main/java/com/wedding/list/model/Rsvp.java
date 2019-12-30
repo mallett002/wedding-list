@@ -4,41 +4,17 @@ import java.util.List;
 
 public class Rsvp {
 
-    private Integer id;
-    private boolean attending;
+    private String token;
     private List<String> guests;
-    private String name;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
 
     public List<String> getGuests() {
         return guests;
     }
 
-    public boolean isAttending() {
-        return attending;
-    }
+    public String getToken() { return token; }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public void setGuests(List<String> guests) { this.guests = guests; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setToken(String token) { this.token = token; }
 
-    public void setGuests(List<String> guests) {
-        // RequestBody.attending will be an array
-        this.guests = guests;
-    }
-
-    public void setAttending(boolean attending) {
-        this.attending = attending;
-    }
 }
