@@ -2,6 +2,7 @@ package com.wedding.list.controllers;
 
 import com.wedding.list.model.Rsvp;
 import org.junit.jupiter.api.Test;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -22,9 +23,9 @@ public class WeddingControllerTest {
         rsvp.setGuests(guests);
 
         restTemplate.postForObject(
-                "http://localhost:8080/list",
+                "http://localhost:8080/rsvp",
                 rsvp,
-                Rsvp.class
+                ResponseEntity.class
         );
     }
 }
