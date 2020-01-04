@@ -5,10 +5,9 @@ import com.wedding.list.service.WeddingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @Controller
 public class WeddingController {
 
@@ -20,9 +19,8 @@ public class WeddingController {
         method = RequestMethod.POST,
         consumes = "application/json"
     )
-    public ResponseEntity<String> addRsvp(@RequestBody Rsvp rsvp) {
-        System.out.println(rsvp);
+    public ResponseEntity<Integer> addRsvp(@RequestBody Rsvp rsvp) {
         weddingService.addRsvp(rsvp);
-        return ResponseEntity.ok("yep");
+        return ResponseEntity.ok(rsvp.getGuests().size());
     }
 }
