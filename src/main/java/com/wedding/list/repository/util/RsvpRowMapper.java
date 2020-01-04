@@ -15,10 +15,8 @@ public class RsvpRowMapper implements RowMapper<Rsvp> {
     @Override
     public Rsvp mapRow(ResultSet rs, int rowNum) throws SQLException {
         Rsvp rsvp = new Rsvp();
-        rsvp.setId(rs.getInt("id"));
-        rsvp.setName(rs.getString("name"));
-        rsvp.setGuests(getList(rs.getArray("guests")));
-        rsvp.setAttending(rs.getBoolean("attending"));
+        rsvp.setToken(rs.getString("group_token"));
+        // Todo: get each guest under token from db and populate each guest corresponding to group_token
         return rsvp;
     }
 

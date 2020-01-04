@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>list</name>
-	<description>wedding list </description>
+	<description>wedding list</description>
 
 	<properties>
 		<java.version>1.8</java.version>

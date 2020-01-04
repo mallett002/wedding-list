@@ -4,6 +4,6 @@ import com.wedding.list.model.Rsvp;
 
 public interface WeddingService {
 
-    Rsvp addRsvp(Rsvp rsvp);
+    void addRsvp(Rsvp rsvp);
 
 }
