@@ -22,7 +22,7 @@ public class WeddingRepositoryImpl implements WeddingRepository {
     @Override
     public Rsvp getRsvp(Integer id) {
         Rsvp rsvp = jdbcTemplate.queryForObject(
-                "SELECT * FROM rsvp_list WHERE id = ?",
+                "SELECT * FROM guests WHERE id = ?",
                 new RsvpRowMapper(),
                 id
         );

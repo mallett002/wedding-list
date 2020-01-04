@@ -15,8 +15,14 @@ public class WeddingController {
     @Autowired
     private WeddingService weddingService;
 
-    @RequestMapping(value = "/rsvp", method = RequestMethod.POST)
-    public @ResponseBody void addRsvp(@RequestBody Rsvp rsvp) {
+    @RequestMapping(
+        value = "/rsvp",
+        method = RequestMethod.POST,
+        consumes = "application/json"
+    )
+    public String addRsvp(@RequestBody Rsvp rsvp) {
+        System.out.println(rsvp);
         weddingService.addRsvp(rsvp);
+        return "yep";
     }
 }
