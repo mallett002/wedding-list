@@ -1,8 +1,9 @@
 package com.wedding.list.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Rsvp {
+public class Rsvp implements Serializable {
 
     private String token;
     private List<String> guests;
